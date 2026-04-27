@@ -1,33 +1,106 @@
-# SimpleCatchGame
+# 🧀 Catch The Cheese
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+A simple arcade-style game built with **LibGDX** where you control a mouse and catch falling cheese.  
+Try to score as many points as possible before you lose all your lives!
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+---
 
-## Platforms
+## 🎮 Gameplay
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+Move the mouse left and right to catch falling cheese.
 
-## Gradle
+- 🧀 Catch cheese → gain points  
+- ❌ Miss cheese → lose a life  
+- 💀 Game over when lives reach 0  
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+---
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+## 🕹 Controls
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+- Left Arrow → Move left  
+- Right Arrow → Move right  
+
+---
+
+## 🧠 Features
+
+- Smooth 2D movement  
+- Collision detection  
+- Score system  
+- Lives system  
+- Game over screen  
+- Sound effects (catch + game over 🎵)  
+- macOS `.app` / `.dmg` export via `jpackage`  
+
+---
+
+## 🔊 Audio
+
+- Catch sound plays when cheese is collected 🧀  
+- Game over sound plays when lives reach zero 💀  
+- Uses `.ogg` sound format  
+
+---
+
+## 🧱 Built With
+
+- Java  
+- LibGDX  
+- Gradle  
+- LWJGL3 backend  
+
+---
+
+## 🚀 Running the game (development)
+
+Clone the repository:
+
+git clone https://github.com/your-username/catch-the-cheese.git  
+cd catch-the-cheese  
+
+Run the game:
+
+./gradlew lwjgl3:run  
+
+---
+
+## 📦 Build desktop version (macOS)
+
+Build JAR:
+
+./gradlew lwjgl3:jar  
+
+Create macOS app:
+
+jpackage \
+  --name "Catch The Cheese" \
+  --input lwjgl3/build/libs \
+  --main-jar SimpleCatchGame-1.0.0.jar \
+  --type dmg \
+  --java-options "-XstartOnFirstThread"  
+
+---
+
+## 🧀 Project Structure
+
+assets/        → images and sounds  
+core/          → game logic  
+lwjgl3/        → desktop launcher  
+build.gradle   → build configuration  
+
+---
+
+## 🎯 Future improvements
+
+- Increasing difficulty over time  
+- Power-ups (slow motion, magnet mouse)  
+- High score system  
+- Animations for cheese collection  
+- Start menu  
+- Mobile version (Android)  
+
+---
+
+## 👨‍💻 Author
+
+Made by Bence Auer
